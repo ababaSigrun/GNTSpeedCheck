@@ -11,3 +11,7 @@ class MobileSuit {
 
     }
 }
+
+function calcStart(){
+    alert("ボタン押下")
+}

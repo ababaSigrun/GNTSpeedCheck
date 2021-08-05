@@ -1,15 +1,97 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
+    <title>GNT速度計算</title>
 </head>
- 
+
 <body>
-    Hello World！
+    <div>
+        <h1>
+            GNT速度計算
+        </h1>
+    </div>
+    <hr>
+
+    <h2>地形選択</h2>
+    地形選択
+    <select name="terrainsuitability">
+        <option value="universe">宇宙</option>
+        <option value="water" selected>水域</option>
+        <option value="plain">平地</option>
+        <option value="desert">砂漠</option>
+        <option value="forest">森林</option>
+    </select>
+    <hr>
+
+    <h2>指導者</h2>
+    自軍指導者
+    <select name="myLeader">
+
+    </select>
+
+    敵軍指導者
+    <select name="enLeader">
+
+    </select>
+    <hr>
+
+    <h2>指導者</h2>
+    自軍ドーピング
+    <select name="myDoping">
+        <option value="on" selected>ON</option>
+        <option value="off">OFF</option>
+    </select>
+
+    敵軍ドーピング
+    <select name="enDoping">
+        <option value="on" selected>ON</option>
+        <option value="off">OFF</option>
+    </select>
+    <hr>
+
 
     <div>
-        <script type="text/javascript" src="/js/calc.js"></script>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">自軍</th>
+                    <th></th>
+                    <th colspan="2">敵軍</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>後衛1</td>
+                    <td>前衛1</td>
+                    <td rowspan="3">VS</td>
+                    <td>前衛1</td>
+                    <td>後衛1</td>
+                </tr>
+                <tr>
+                    <td>後衛2</td>
+                    <td>前衛2</td>
+
+                    <td>前衛2</td>
+                    <td>後衛2</td>
+                </tr>
+                <tr>
+                    <td>後衛3</td>
+                    <td>前衛3</td>
+
+                    <td>前衛3</td>
+                    <td>後衛3</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+    <button onclick="calcStart()">計算開始</button>
+
+
+    <script type="text/javascript" src="/js/calc.js"></script>
+
 
 </body>
+
 </html>
