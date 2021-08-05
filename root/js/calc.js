@@ -13,5 +13,5 @@ class MobileSuit {
 }
 
 function calcStart(){
-    alert("ボタン押下")
+    alert("計算開始");
 }

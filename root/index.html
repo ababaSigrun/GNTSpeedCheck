@@ -28,15 +28,44 @@
     <hr>
 
     <h2>指導者</h2>
-    自軍指導者
-    <select name="myLeader">
+    <p>
+        自軍指導者
+        <select name="myLeader">
 
-    </select>
+        </select>
+        自軍指導者レベル
+        <select name="myLeaderLevel">
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+    </p>
+    <p>
+        敵軍指導者
+        <select name="enLeader">
 
-    敵軍指導者
-    <select name="enLeader">
-
-    </select>
+        </select>
+        敵軍指導者レベル
+        <select name="enLeaderLevel">
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+    </p>
     <hr>
 
     <h2>ドーピングアイテム</h2>
@@ -53,6 +82,17 @@
     </select>
     <hr>
 
+    <h2>MA設定</h2>
+
+    <input type="checkbox" name="myFrontMA">自軍前衛MA
+    <input type="checkbox" name="myBackMA" >自軍後衛MA
+    <input type="checkbox" name="enFrontMA">敵軍前衛MA
+    <input type="checkbox" name="enBackMA" >敵軍後衛MA
+    <button onclick="drawStart()">描写開始</button>
+    <hr>
+
+
+
 
     <div>
         <table border="1">
@@ -65,7 +105,55 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>後衛1</td>
+                    <td>
+                        <h3>後衛1</h3>
+                        <div name="myBack1">
+                            <p>
+                                レア度
+                                <select name="myBack1Rare">
+                                    <option value="4" selected>★★★★</option>
+                                    <option value="3">★★★</option>
+                                    <option value="2">★★</option>
+                                    <option value="1">★</option>
+                                </select>
+
+                                タイプ
+                                <select name="myBack1Type">
+                                    <option value="speed">機動</option>
+                                    <option value="power">攻撃</option>
+                                    <option value="deffence">防御</option>
+                                    <option value="normal">万能</option>
+                                    <option value="control">制圧</option>
+                                </select>
+                            </p>
+                            <p>
+                                コスト
+                                <select name="myBack1Cost">
+                                    <option value="10">10</option>
+                                    <option value="9">9</option>
+                                    <option value="8">8</option>
+                                    <option value="7">7</option>
+                                    <option value="6">6</option>
+                                    <option value="5">5</option>
+                                    <option value="4">4</option>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </p>
+                            <p>
+                                スキル1
+                                <select name="myBack1Skill1">
+                                </select>
+                                スキル2
+                                <select name="myBack1Skill2">
+                                </select>
+                                スキル3
+                                <select name="myBack1Skill3">
+                                </select>
+                            </p>
+                        </div>
+
+                    </td>
                     <td>前衛1</td>
                     <td rowspan="3">VS</td>
                     <td>前衛1</td>
@@ -93,6 +181,7 @@
 
 
     <script type="text/javascript" src="js/calc.js"></script>
+    <script type="text/javascript" src="js/draw.js"></script>
 </body>
 
 </html>
