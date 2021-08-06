@@ -1,3 +1,6 @@
+/**
+ * モビルスーツクラス
+ */
 class MobileSuit {
     constructor(type, rare, cost, size, skill_1, skill_2, skill_3, terrainsuitability) {
         this.type = type;
@@ -12,6 +15,9 @@ class MobileSuit {
     }
 }
 
+/**
+ * SPEED計算スタートjs
+ */
 function calcStart(){
     alert("前衛１　speed:400.2\n 前衛２ speed:350.2");
 }
