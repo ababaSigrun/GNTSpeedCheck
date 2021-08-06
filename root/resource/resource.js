@@ -15,11 +15,7 @@ function getLeaderInfo() {
     retList.push('バニング',' 機動増加Ⅰ',0);
     retList.push('トップ',' 機動増加Ⅰ',0);
     retList.push('ガトー',' 機動増加Ⅰ',0);   
-
-    return retList;
-}
-
-
+    
     // 加工前のﾋﾟｭｱ部分もおいとく。
     // ハマーン, 機動増加Ⅲ, 16.5
     // キシリア, 機動増加Ⅱ, 0
@@ -36,3 +32,7 @@ function getLeaderInfo() {
     // バニング, 機動増加Ⅰ, 0
     // トップ, 機動増加Ⅰ, 0
     // ガトー, 機動増加Ⅰ, 0
+    return retList;
+}
+
+

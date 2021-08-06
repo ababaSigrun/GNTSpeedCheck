@@ -19,5 +19,6 @@ class MobileSuit {
  * SPEED計算スタートjs
  */
 function calcStart(){
-    alert("前衛１　speed:400.2\n 前衛２ speed:350.2");
+    // alert("前衛１　speed:400.2\n 前衛２ speed:350.2");
+    console.log("前衛１　speed:400.2\n 前衛２ speed:350.2");
 }
