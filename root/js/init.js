@@ -79,21 +79,26 @@ function drawMSSetting(name) {
     // 追加したｐタグを取得する。
     // var p = document.getElementsByName( name +"ReraType")[0];
     var selectReraElement = document.createElement('select');
-    // ここリソースにすること。（リファクタ必須）
-    var reraOptionWord = ["★", "★★", "★★★", "★★★★"];
+    // リアリティリスト取得
+    var reraOptionWord =getRarityList();
+    var count = 0;
+
     reraOptionWord.forEach(function (value) {
-        var reraOption = document.createElement("option");
-        reraOption.text = value;
-        reraOption.value = value;
-        selectReraElement.appendChild(reraOption);
+        if (count === 0 || count % 2 === 0) {
+            var reraOption = document.createElement("option");
+            reraOption.text = value;
+            reraOption.value = value;
+            selectReraElement.appendChild(reraOption);
+        }
+        count++;
     });
     var textNode = document.createTextNode('レア度');
     p.appendChild(selectReraElement);
     p.appendChild(textNode);
     //////////////////////////////////////////////////////////////
     var selectTypeElement = document.createElement('select');
-    // ここリソースにすること。（リファクタ必須）
-    var typeOptionWord = ["機動", "攻撃", "防御", "万能", "制圧"];
+    // タイプリスト取得
+    var typeOptionWord = getTypeList();
     typeOptionWord.forEach(function (value) {
         var typeOption = document.createElement("option");
         typeOption.text = value;
@@ -112,8 +117,8 @@ function drawMSSetting(name) {
     var p = div.appendChild(pElement2);
     //////////////////////////////////////////////////////////////
     var selectCostElement = document.createElement('select');
-    // ここリソースにすること。（リファクタ必須）
-    var costOptionWord = [10, 9, 8, 7, 6, 5, 4, 3, 2];
+    // コストリスト取得
+    var costOptionWord = getCostList();
     costOptionWord.forEach(function (value) {
         var costOption = document.createElement("option");
         costOption.text = value;
@@ -133,12 +138,8 @@ function drawMSSetting(name) {
     var selectSkill1Element = document.createElement('select');
     var selectSkill2Element = document.createElement('select');
     var selectSkill3Element = document.createElement('select');
-    // ここリソースにすること。（リファクタ必須）
-    var skillOptionWord = ["攻撃機動増加Ⅳ", "攻撃機動増加Ⅲ", "攻撃機動増加Ⅱ", "攻撃機動増加Ⅰ",
-        "防御機動増加Ⅳ", "防御機動増加Ⅲ", "防御機動増加Ⅱ", "防御機動増加Ⅰ",
-        "機動増加Ⅳ", "機動増加Ⅲ", "機動増加Ⅱ", "機動増加Ⅰ",
-        "機動減少Ⅳ", "機動減少Ⅲ", "機動減少Ⅱ", "機動減少Ⅰ"
-    ];
+    // スキルリスト取得
+    var skillOptionWord = getSkilNameList();
     skillOptionWord.forEach(function (value) {
         var skillOption1 = document.createElement("option");
         var skillOption2 = document.createElement("option");
