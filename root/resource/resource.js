@@ -80,6 +80,28 @@ function getSkilNameList(){
     return retList;
 }
 
+/**
+ * スキルlv4Value
+ */
+ function getSkilLv4ValueList(){
+    var retList = [];
+    retList.push("【始動】攻撃機動増加Ⅳ", 3.13,
+    "【始動】防御機動増加Ⅳ", 3.13,
+    "【始動】機動増加Ⅳ", 5.69, 
+    "【始動】全体機動増加Ⅳ", 1.7, 
+    "【始動】全体機動減少Ⅳ", 1.28);
+    return retList;
+}
 
-
-
+/**
+ * スキルlv3Value
+ */
+ function getSkilLv3ValueList(){
+    var retList = [];
+    retList.push("【始動】攻撃機動増加Ⅲ", 2.08,
+    "【始動】防御機動増加Ⅲ", 2.08,
+    "【始動】機動増加Ⅲ", 3.79, 
+    "【始動】全体機動増加Ⅲ", 1.13, 
+    "【始動】全体機動減少Ⅲ", 0.85);
+    return retList;
+ }
