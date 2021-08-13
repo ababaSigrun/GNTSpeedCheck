@@ -72,15 +72,15 @@ function drawMSSetting(name) {
     var div = document.getElementsByName(name)[0];
     /////////////////////////////////////////////////////////////////////
     // p要素を作成する。(rera)　ここちゃんとメソッドで分けること。（リファクタ必須）
-    var pElement = document.createElement('p');
-    pElement.name = name + "ReraType";
-    var p = div.appendChild(pElement);
+    var pElementRera = document.createElement('p');
+    pElementRera.name = name + "ReraType";
+    var p = div.appendChild(pElementRera);
 
     // 追加したｐタグを取得する。
     // var p = document.getElementsByName( name +"ReraType")[0];
     var selectReraElement = document.createElement('select');
     // リアリティリスト取得
-    var reraOptionWord =getRarityList();
+    var reraOptionWord = getRarityList();
     var count = 0;
 
     reraOptionWord.forEach(function (value) {
@@ -112,9 +112,9 @@ function drawMSSetting(name) {
 
 
     //////////////////////////////////////////////////////////////
-    var pElement2 = document.createElement('p');
-    pElement2.name = name + "Cost";
-    var p = div.appendChild(pElement2);
+    var pElementCost = document.createElement('p');
+    pElementCost.name = name + "Cost";
+    var p = div.appendChild(pElementCost);
     //////////////////////////////////////////////////////////////
     var selectCostElement = document.createElement('select');
     // コストリスト取得
@@ -129,11 +129,24 @@ function drawMSSetting(name) {
     p.appendChild(selectCostElement);
     p.appendChild(textNode);
     //////////////////////////////////////////////////////////////
+    var selectSuitabilityElement = document.createElement('select');
+    // 適正リスト取得
+    var suitabilityOptionWord = getSuitabilityList();
+    suitabilityOptionWord.forEach(function (value) {
+        var suitabilityOption = document.createElement("option");
+        suitabilityOption.text = value;
+        suitabilityOption.value = value;
+        selectSuitabilityElement.appendChild(suitabilityOption);
+    });
+    var textNode = document.createTextNode('適正');
+    p.appendChild(selectSuitabilityElement);
+    p.appendChild(textNode);
+    //////////////////////////////////////////////////////////////
 
 
-    var pElement3 = document.createElement('p');
-    pElement3.name = name + "Skill";
-    var p = div.appendChild(pElement3);
+    var pElementSkill = document.createElement('p');
+    pElementSkill.name = name + "Skill";
+    var p = div.appendChild(pElementSkill);
     //////////////////////////////////////////////////////////////
     var selectSkill1Element = document.createElement('select');
     var selectSkill2Element = document.createElement('select');
@@ -165,15 +178,15 @@ function drawMSSetting(name) {
     p.appendChild(textNode3);
 
     //////////////////////////////////////////////////////////////
-    var pElement4 = document.createElement('p');
-    pElement4.name = name + "PSkill";
-    var p = div.appendChild(pElement4);
+    var pElementPSkill = document.createElement('p');
+    pElementPSkill.name = name + "PSkill";
+    var p = div.appendChild(pElementPSkill);
     //////////////////////////////////////////////////////////////
     var selectPSkillElement = document.createElement('select');
     // ここリソースにすること。（リファクタ必須）
-    var pSkillOptionWord = ["攻撃機動増加Ⅳ", "攻撃機動増加Ⅲ", "攻撃機動増加Ⅱ", "攻撃機動増加Ⅰ",
-        "防御機動増加Ⅳ", "防御機動増加Ⅲ", "防御機動増加Ⅱ", "防御機動増加Ⅰ",
-        "機動増加Ⅳ", "機動増加Ⅲ", "機動増加Ⅱ", "機動増加Ⅰ"
+    var pSkillOptionWord = ["攻撃機動増加Ⅳ", "攻撃機動増加Ⅲ",
+        "防御機動増加Ⅳ", "防御機動増加Ⅲ",
+        "機動増加Ⅳ", "機動増加Ⅲ"
     ];
     pSkillOptionWord.forEach(function (value) {
         var skillOption = document.createElement("option");
