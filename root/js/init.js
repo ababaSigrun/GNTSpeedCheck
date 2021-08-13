@@ -183,11 +183,8 @@ function drawMSSetting(name) {
     var p = div.appendChild(pElementPSkill);
     //////////////////////////////////////////////////////////////
     var selectPSkillElement = document.createElement('select');
-    // ここリソースにすること。（リファクタ必須）
-    var pSkillOptionWord = ["攻撃機動増加Ⅳ", "攻撃機動増加Ⅲ",
-        "防御機動増加Ⅳ", "防御機動増加Ⅲ",
-        "機動増加Ⅳ", "機動増加Ⅲ"
-    ];
+    // Pスキル取得
+    var pSkillOptionWord = getPSkilNameList();
     pSkillOptionWord.forEach(function (value) {
         var skillOption = document.createElement("option");
         skillOption.text = value;

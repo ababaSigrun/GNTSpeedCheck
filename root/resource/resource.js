@@ -54,7 +54,7 @@ function getRarityList() {
  */
 function getTypeList() {
     var retList = [];
-    retList.push("機動", "攻撃", "防御", "万能", "制圧","超機動");
+    retList.push("機動", "攻撃", "防御", "万能", "制圧", "超機動");
     return retList;
 }
 
@@ -71,55 +71,66 @@ function getCostList() {
 /**
  * 適正取得
  */
- function getSuitabilityList() {
+function getSuitabilityList() {
     var retList = [];
-    retList.push("A","B","C","D");
+    retList.push("A", "B", "C", "D");
     return retList;
 }
 /**
  * 適正value取得
  */
- function getSuitabilityValueList() {
+function getSuitabilityValueList() {
     var retList = [];
-    retList.push(10,5,0,-5);
+    retList.push(10, 5, 0, -5);
     return retList;
 }
 
 /**
  * スキル名
  */
-function getSkilNameList(){
+function getSkilNameList() {
     var retList = [];
     retList.push("【始動】攻撃機動増加Ⅳ", "【始動】攻撃機動増加Ⅲ",
-    "【始動】防御機動増加Ⅳ", "【始動】防御機動増加Ⅲ",
-    "【始動】機動増加Ⅳ", "【始動】機動増加Ⅲ", 
-    "【始動】全体機動増加Ⅳ", "【始動】全体機動増加Ⅲ", 
-    "【始動】全体機動減少Ⅳ", "【始動】全体機動減少Ⅲ");
+        "【始動】防御機動増加Ⅳ", "【始動】防御機動増加Ⅲ",
+        "【始動】機動増加Ⅳ", "【始動】機動増加Ⅲ",
+        "【始動】全体機動増加Ⅳ", "【始動】全体機動増加Ⅲ",
+        "【始動】全体機動減少Ⅳ", "【始動】全体機動減少Ⅲ");
     return retList;
 }
 
 /**
  * スキルlv4Value
  */
- function getSkilLv4ValueList(){
+function getSkilLv4ValueList() {
     var retList = [];
     retList.push("【始動】攻撃機動増加Ⅳ", 3.13,
-    "【始動】防御機動増加Ⅳ", 3.13,
-    "【始動】機動増加Ⅳ", 5.69, 
-    "【始動】全体機動増加Ⅳ", 1.7, 
-    "【始動】全体機動減少Ⅳ", 1.28);
+        "【始動】防御機動増加Ⅳ", 3.13,
+        "【始動】機動増加Ⅳ", 5.69,
+        "【始動】全体機動増加Ⅳ", 1.7,
+        "【始動】全体機動減少Ⅳ", 1.28);
     return retList;
 }
 
 /**
  * スキルlv3Value
  */
- function getSkilLv3ValueList(){
+function getSkilLv3ValueList() {
     var retList = [];
     retList.push("【始動】攻撃機動増加Ⅲ", 2.08,
-    "【始動】防御機動増加Ⅲ", 2.08,
-    "【始動】機動増加Ⅲ", 3.79, 
-    "【始動】全体機動増加Ⅲ", 1.13, 
-    "【始動】全体機動減少Ⅲ", 0.85);
+        "【始動】防御機動増加Ⅲ", 2.08,
+        "【始動】機動増加Ⅲ", 3.79,
+        "【始動】全体機動増加Ⅲ", 1.13,
+        "【始動】全体機動減少Ⅲ", 0.85);
     return retList;
- }
+}
+
+/**
+* スキル名
+*/
+function getPSkilNameList() {
+    var retList = [];
+    retList.push("【始動】攻撃機動増加Ⅳ", "【始動】攻撃機動増加Ⅲ",
+        "【始動】防御機動増加Ⅳ", "【始動】防御機動増加Ⅲ",
+        "【始動】機動増加Ⅳ", "【始動】機動増加Ⅲ");
+    return retList;
+}
