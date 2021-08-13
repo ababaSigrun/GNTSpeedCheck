@@ -67,6 +67,24 @@ function getCostList() {
     return retList;
 }
 
+
+/**
+ * 適正取得
+ */
+ function getSuitabilityList() {
+    var retList = [];
+    retList.push("A","B","C","D");
+    return retList;
+}
+/**
+ * 適正value取得
+ */
+ function getSuitabilityValueList() {
+    var retList = [];
+    retList.push(10,5,0,-5);
+    return retList;
+}
+
 /**
  * スキル名
  */
