@@ -54,7 +54,7 @@ function getRarityList() {
  */
 function getTypeList() {
     var retList = [];
-    retList.push("機動", "攻撃", "防御", "万能", "制圧");
+    retList.push("機動", "攻撃", "防御", "万能", "制圧","超機動");
     return retList;
 }
 
