@@ -12,6 +12,6 @@ https://ababasigrun.github.io/GNTSpeedCheck/root/index.html
 
 【データ情報】
 
-速度上昇を行える指導者だけ抜き出しました。
+スキルについて少しデータを抜き出し
 
 
