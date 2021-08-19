@@ -50,6 +50,19 @@ function getRarityList() {
 }
 
 /**
+ * レアリティリスト（連想配列）
+ * @returns 
+ */
+function getRarityMapList() {
+    var retList = {
+        '★★★★': 4,
+        '★★★': 3 ,
+        '★★': 2,
+        '★':1};
+    return retList;
+}
+
+/**
  * タイプ取得
  */
 function getTypeList() {
