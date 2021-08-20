@@ -39,6 +39,18 @@ function getLeaderInfo() {
     return retList;
 }
 
+/**
+ * 艦長スキル（機動上昇のみ）
+ * @returns 
+ */
+function getCaptainSkill(){
+    const retList = {
+        '全体機動支援Ⅳ': 27.53,
+        '全体機動支援Ⅲ': 18.22,
+        'その他': 0
+    };
+    return retList;
+}
 
 function getRarityList() {
     var retList = [];

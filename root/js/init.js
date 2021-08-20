@@ -4,6 +4,9 @@
 function init() {
     // 指導者をドロップダウンリストに設定
     setLeaderName();
+    // 艦長スキルをドロップダウンリストに設定。
+    setCaptainSkill();
+
     // MSの設定を行う。
     drawMS();
 
@@ -45,6 +48,31 @@ function setLeaderName() {
         option2.value = value;
         enSelect.appendChild(option2);
     });
+}
+
+
+/**
+ * 艦長スキルをドロップダウンリストに設定
+ */
+function setCaptainSkill(){
+    // 艦長スキル取得
+    const captainSkill = getCaptainSkill();
+
+    // 指導者設定
+    const select = document.getElementsByName("myCaptainSkill")[0];
+    const enSelect = document.getElementsByName("enCaptainSkill")[0];
+
+    for (let key in captainSkill) {
+        const myOption = document.createElement("option");
+        myOption.text = key;
+        myOption.value = key;
+        select.appendChild(myOption);
+        const enOption = document.createElement("option");
+        enOption.text = key;
+        enOption.value = key;
+        enSelect.appendChild(enOption);
+    }
+
 }
 
 /**
