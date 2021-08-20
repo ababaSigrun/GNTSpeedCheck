@@ -19,6 +19,6 @@ class MobileSuit {
  * SPEED計算スタートjs
  */
 function calcStart(){
-    // alert("前衛１　speed:400.2\n 前衛２ speed:350.2");
+    // 機体速度 * 指導者スキル増加分 * item増加分 *艦長スキル * パイロットスキル * 連携スキル * 戦闘開始機体スキル * 演説スキル
     console.log("前衛１　speed:400.2\n 前衛２ speed:350.2");
 }
